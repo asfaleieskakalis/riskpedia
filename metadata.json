@@ -1,0 +1,6 @@
+{
+  "name": "DocuQuery - Έξυπνη Γνωσιακή Βάση & Q&A",
+  "description": "Ασφαλές σύστημα ερωταπαντήσεων βασισμένο αποκλειστικά σε εσωτερικά έγγραφα, με αυστηρή τεκμηρίωση και προστασία αρχείων.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

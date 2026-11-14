@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-kakalis-navy: #122544;
+  --color-kakalis-midnight: #0b1424;
+  --color-kakalis-deep: #080f1b;
+  --color-kakalis-slate: #1e355b;
+  --color-kakalis-muted: #415069;
+  
+  --color-kakalis-emerald: #008361;
+  --color-kakalis-emerald-vivid: #1ba475;
+  --color-kakalis-emerald-light: #00b090;
+  --color-kakalis-mint: #def4f0;
+  
+  --color-kakalis-cream: #f5f3ee;
+  --color-kakalis-sand: #ece9e2;
+  --color-kakalis-border: #dadce0;
+}
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #f5f3ee;
+    color: #0b1424;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+  }
+  
+  .dark body,
+  :root.dark body {
+    background-color: #0b1424;
+    color: #f2f3f6;
+  }
+
+  html.theme-transitioning,
+  html.theme-transitioning *,
+  html.theme-transitioning *::before,
+  html.theme-transitioning *::after {
+    transition: background-color 300ms ease-in-out,
+                border-color 300ms ease-in-out,
+                color 300ms ease-in-out,
+                fill 300ms ease-in-out,
+                stroke 300ms ease-in-out,
+                box-shadow 300ms ease-in-out !important;
+  }
+  
+  code, pre, .tabular-nums {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  body.visitor-protected,
+  body.visitor-protected * {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    -webkit-touch-callout: none !important;
+  }
+
+  body.visitor-protected img,
+  body.visitor-protected svg,
+  body.visitor-protected picture {
+    -webkit-user-drag: none !important;
+    user-drag: none !important;
+  }
+
+  body.visitor-protected input,
+  body.visitor-protected textarea {
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+  }
+}
